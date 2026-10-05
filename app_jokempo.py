@@ -53,10 +53,10 @@ if st.button("🕹️ Realizar Disputa"):
         or (j1 == "papel" and j2 == "pedra")
     ):
       st.success(f"🎉 **Resultado:** Você venceu! ({j1} ganha de {j2})")
-      st.balloons()  # Chuva de balões para a sua vitória!
+      st.balloons()  # Chuva de balões só quando você vence!
     else:
-      st.success(f"🤖 **Resultado:** O Computador venceu! ({j2} ganha de {j1})")
-      st.balloons()  # Balões também para animar a rodada!
+      st.error(f"🤖 **Resultado:** O Computador venceu! ({j2} ganha de {j1})")
+      # Sem balões para o robô, afinal a vitória é dele!
 
 st.markdown("---")
 st.caption(
